@@ -1,3 +1,6 @@
+/**
+ * 数据接口
+ */
 export interface TableColumns {
   productCategory: string
   prjCategory: string

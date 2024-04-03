@@ -16,10 +16,19 @@ import { tableColumns } from '@/model/tableColums.tsx'
 const Items: FC = () => {
   const [activeRadio, setActiveRadio] = useState(RadioOptionsEnum.CARD)
 
+  /**
+   * 修改选择器选项
+   * @param value
+   */
   const handleChangeRadio = ({ target: { value } }: RadioChangeEvent) => {
     setActiveRadio(value)
   }
 
+  /**
+   * 表格行类名，添加斑马格
+   * @param _
+   * @param index
+   */
   const getRowClassName = (_: any, index: number): string => {
     return index % 2 === 0 ? '' : 'row-odd'
   }
